@@ -1,7 +1,18 @@
 - name: Print hello world
-  hosts: local
-  connection: local
+  hosts: local    # we were pointing it to local instaed of hosts or servers
+  connection: local   #we dont need to add username and passowrd if we add connection= local
   tasks:
   - name: print helloworld
     ansible.builtin.debug:
       msg: "This is hello world"
+
+
+
+- name: My name is mehar sai
+  hosts: local
+  connection: local
+  tasks:
+  - name: Print my name
+    ansible.builtin.debug:
+      msg: "My name is mehar sai"
+      
