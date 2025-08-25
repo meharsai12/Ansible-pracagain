@@ -1,0 +1,8 @@
+- name: Install nginx
+  hosts: frontend
+  become: yes #By adding become=yes it will execute with sudo user
+  tasks:
+  - name: Install nginx 
+    ansible.builtin.package:
+      name: nginx
+      state: present # present means it should be installed is is not there so install it
