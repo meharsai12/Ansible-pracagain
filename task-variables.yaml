@@ -1,0 +1,11 @@
+- name: Task level 
+  hosts: local
+  connection: local
+  tasks:
+  - name: practing tasks level variables
+    vars:
+      DATE: 16-09-2025
+      TIME: 11.35
+
+    ansible.builtin.debug:
+      msg: " The date is {{ DATE }} and the time is {{ TIME }}"
