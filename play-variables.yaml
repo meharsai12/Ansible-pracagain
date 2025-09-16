@@ -1,0 +1,11 @@
+- name: Play level variables
+  hosts: local
+  connection: local
+  vars:
+    KIRANAM: grocery
+    NAME: R.satyanarayana kiranam
+    TYPE: Wholesale and general
+  tasks:
+  - name: Printing play level variables
+    ansible.builtin.debug:
+      msg: "My shop is {{ KIRANAM }} and it is {{ TYPE }} and the name is {{ NAME }}"

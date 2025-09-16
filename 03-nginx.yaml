@@ -16,3 +16,25 @@
       name: nginx
       state: started
       enabled: yes # it is to enable the service
+
+
+
+
+
+
+  
+# - name: install nginx
+#   hosts: local
+#   connection: local
+#   become: yes
+#   tasks:
+#   - name: install nginx
+#     ansible.builtin.package:
+#       name: nginx
+#       state: present
+
+#   - name: start nginx
+#     ansible.builtin.service:
+#       name: nginx
+#       state: started
+#       enabled: yes

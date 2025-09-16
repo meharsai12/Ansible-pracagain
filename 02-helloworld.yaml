@@ -15,4 +15,16 @@
   - name: Print my name
     ansible.builtin.debug:
       msg: "My name is mehar sai and he is good at devops and want to ;earn devops"
+
+
+
+
+
+- name: mehar sai devops engineer
+  hosts: local
+  connection: locak
+  tasks:
+  - name: print my information
+    ansible.builtin.debug:
+      msg: "i want to master in devops "
       
