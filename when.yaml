@@ -9,11 +9,17 @@
   tasks:
   - name: The given number  is greater than 100
     ansible.builtin.debug:
-      msg: " The number is {{ NUMBER }} greater than or equal to 100"
+      msg: " The number is {{ NUMBER }} greater than  100"
     when: NUMBER | int >= 100
 
 
   - name: The given number is less than 100
     ansible.builtin.debug:
-      msg: " The number is {{ NUMBER }} less than or equal to 100"
+      msg: " The number is {{ NUMBER }} less than  100"
     when: NUMBER  | int <= 100
+
+  
+  - name: The given number equal to  100
+    ansible.builtin.debug:
+      msg: " The number is {{ NUMBER }}  equal to 100"
+    when: NUMBER  | int == 100
