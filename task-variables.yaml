@@ -20,3 +20,10 @@
       TIME:  EOD
     ansible.builtin.debug:
       msg: " Today is {{ DAY }} and the topics to cover is {{ TOPICS }} and complete it by {{ TIME }}"
+
+
+  - name: task level variables practice task -3
+    vars: 
+      TIME: need to complete devops by 45 days with confidence and practical and along with dedicatio
+    ansible.builtin.debug:
+      msg : " {{ TIME }} "
