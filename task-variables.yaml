@@ -9,3 +9,14 @@
 
     ansible.builtin.debug:
       msg: " The date is {{ DATE }} and the time is {{ TIME }}"
+
+
+
+
+  - name: task level variables practice task 2
+    vars:
+      DAY: Tuesday 
+      TOPICS: need to coer variables and dat types today and complete it along eith practice
+      TIME: by EOD
+    ansible.builtin.debug:
+      msg: " Today is {{ DAY }} and the topics to cover is {{ TOPICS }} and complete it by {{ TIME }}"
