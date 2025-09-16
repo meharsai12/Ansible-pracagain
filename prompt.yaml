@@ -1,0 +1,11 @@
+- name: prompting
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: GREETING
+    prompt: please enter your GREETING
+    private: false
+  tasks:
+  - name: Prompting variables
+    ansible.builtin.debug:
+      msg: "{{ GREETING }}"
