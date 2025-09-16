@@ -1,0 +1,7 @@
+- name: arguments for variables
+  hosts: local
+  connection: local
+  tasks:
+  - name: Passing variables through arguments 
+    ansible.builtin.debug:
+      msg: "The king is {{ KING }} and the queen is {{ QUEEN }}"
