@@ -1,7 +1,7 @@
 - name: Calling variables through files 
   hosts: local
   connection: local
-  var_files:
+  vars_files:
     variables.yaml
 
   tasks:
