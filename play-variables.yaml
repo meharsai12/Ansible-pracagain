@@ -27,7 +27,7 @@
     TRAINER: Mehar Sai
     COURSE: Learning devops with full confidence
     MODE: online
-    Skills: All devops ansible linux shell-scripting terraform kubernetes ci/cd and AWS
+    SKILLS: All devops ansible linux shell-scripting terraform kubernetes ci/cd and AWS
 
   tasks: 
   - name: Priting play level variables
