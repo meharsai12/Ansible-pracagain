@@ -1,0 +1,7 @@
+- name: calling variables for hosts
+  hosts: local
+  connection: local
+  tasks:
+  - name: calling variables for preferred hosts
+    ansible.builtin.debug:
+      msg: " The course is {{ COURSE }} and the time is {{ TIME }}"
