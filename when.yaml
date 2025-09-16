@@ -1,0 +1,19 @@
+- name: when datatype
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: NUMBER
+    prompt: please enter the NUMBER
+    private: false
+
+  tasks:
+  - name: The given number  is greater than 100
+    ansible.builtin.debug:
+      msg: " The number is {{ NUMBER }} greater than or equal to 100"
+    when: NUMBER > 100
+
+
+  - name: The given number is less than 100
+    ansible.builtin.debug:
+      msg: " The number is {{ NUMBER }} less than or equal to 100"
+    when: NUMBER < 100
