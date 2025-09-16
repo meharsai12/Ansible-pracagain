@@ -16,3 +16,20 @@
      NAME: mstc kiranam
     ansible.builtin.debug:
       msg: "My shop is {{ KIRANAM }} and it is {{ TYPE }} and the name is {{ NAME }}"
+
+
+
+
+- name: Printing play level variables
+  hosts: local
+  connection: local
+  vars:
+    TRAINER: Mehar Sai
+    COURSE: Learning devops with full confidence
+    MODE: online
+    Skills: All devops ansible linux shell-scripting terraform kubernetes ci/cd and AWS
+
+  tasks: 
+  - name: Priting play level variables
+    ansible.builtin.debug:
+      msg: "I am the {{ TRAINER }} and teh course is {{ COURSE }} and the mode is {{ MODE }} and the skills are {{ SKILLS}}"
