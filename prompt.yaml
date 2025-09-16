@@ -25,3 +25,23 @@
     ansible.builtin.debug:
       msg: "The username is {{ USERNAME }}
             The password id {{ PASSWORD }}"
+
+
+
+
+- name: prompting
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: NAME
+    prompt: my mother name is 
+    private: false
+
+  - name: OCCUPATION
+    prompt: my mother is 
+    private: false
+
+  tasks:
+  - name: prompting
+    ansible.builtin.debug:
+      msg: "My mother name is {{ NAME }} an her occupation is {{ OCCUPATION }}"
