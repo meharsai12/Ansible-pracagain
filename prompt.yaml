@@ -9,3 +9,19 @@
   - name: Prompting variables
     ansible.builtin.debug:
       msg: "{{ GREETING }}"
+
+
+- name: prompting
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: USERNAME
+    prompt: please enter your USERNAME
+  - name: PASSWORD
+    prompt: please enter your PASSWORD
+
+  tasks:
+  - name:  prompting username and password
+    ansible.builtin.debug:
+      msg: "The username is {{ USERNAME }}
+            The password id {{ PASSWORD }}"
