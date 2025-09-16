@@ -1,0 +1,10 @@
+- name: Calling variables through files 
+  hosts: local
+  connection: local
+  var_files:
+    variables.yaml
+
+  tasks:
+  - name: Printing variables from files folder
+    ansible.builtin.debug:
+      msg: "The course is {{ COURSE }} and the mode is {{ MODE }} and the time is {{ TIME }}"
