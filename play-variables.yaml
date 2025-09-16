@@ -9,3 +9,10 @@
   - name: Printing play level variables
     ansible.builtin.debug:
       msg: "My shop is {{ KIRANAM }} and it is {{ TYPE }} and the name is {{ NAME }}"
+
+
+  - name: pring play level variables again with add task level variables
+    vars:
+     NAME: mstc kiranam
+    ansible.builtin.debug:
+      msg: "My shop is {{ KIRANAM }} and it is {{ TYPE }} and the name is {{ NAME }}"
