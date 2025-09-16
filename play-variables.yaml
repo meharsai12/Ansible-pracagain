@@ -33,3 +33,20 @@
   - name: Priting play level variables
     ansible.builtin.debug:
       msg: "I am the {{ TRAINER }} and teh course is {{ COURSE }} and the mode is {{ MODE }} and the skills are {{ SKILLS}}"
+
+
+
+
+- name: play level variables 
+  hosts: local
+  connection: local
+  vars:
+    TASKS: practicing play level 
+    TIMES: Till i am confident
+    SUBJECT: Ansible 
+    TYPE: play levl variables
+
+  tasks:
+  - name: Practing variables
+    ansible.builtin.debug:
+      msg: "my tasks are {{ TASKS }} and times were {{ TIMES }} the subject is {{ SUBJECT }} and the type is {{ TYPE }}"
